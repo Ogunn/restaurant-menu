@@ -18,23 +18,25 @@ const useStyles = makeStyles({
     padding: "0",
     marginBottom: "20px",
     display: "block",
-    borderRadius: "4px",
-    maxHeight: "150px"
+    borderRadius: "4px"
   },
   card: {
-    display: "flex"
+    display: "flex",
+    maxHeight: "150px"
   },
   cardMedia: {
     height: "150px",
-    width: "150px"
+    width: "150px",
+    minWidth: "120px"
   },
   cardContent: {
     position: "relative",
-    minWidth: "240px"
+    minWidth: "100px",
+    padding: "10px"
   },
   price: {
     position: "absolute",
-    bottom: "10px",
+    bottom: "1px",
     right: "10px"
   }
 });
@@ -60,9 +62,7 @@ const MenuCard: React.FC = () => {
               <Card className={classes.card}>
                 {cardMadia}
                 <CardContent className={classes.cardContent}>
-                  <Typography variant="h5" gutterBottom>
-                    {dish.name}
-                  </Typography>
+                  <Typography variant="h6">{dish.name}</Typography>
                   <Typography variant="subtitle1">
                     {dish.description}
                   </Typography>
